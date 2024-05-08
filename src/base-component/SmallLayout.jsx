@@ -21,7 +21,7 @@ const SmallLayout = () => {
           <div className={classNames({ 'small-yellow-line mr-n2.5': getConfig().SITE_NAME === 'edX' })} />
           <h1
             className={classNames(
-              'text-white mt-3.5 mb-3.5',
+              'text-black mt-3.5 mb-3.5',
               { 'ml-4.5': getConfig().SITE_NAME !== 'edX' },
             )}
           >
