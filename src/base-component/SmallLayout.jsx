@@ -11,7 +11,7 @@ const SmallLayout = () => {
   const { formatMessage } = useIntl();
 
   return (
-    <span className="bg-primary-400 w-100">
+    <span className="bg-white w-100">
       <div className="col-md-12 small-screen-top-stripe" />
       <div>
         <Hyperlink destination={getConfig().MARKETING_SITE_BASE_URL}>
