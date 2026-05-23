@@ -23,7 +23,7 @@ import {
 import EnterpriseSSO from '../common-components/EnterpriseSSO';
 import {
   COMPLETE_STATE,
-  DEFAULT_STATE, INVALID_NAME_REGEX, LETTER_REGEX, NUMBER_REGEX, PENDING_STATE, REGISTER_PAGE, VALID_EMAIL_REGEX,
+  DEFAULT_STATE, INVALID_NAME_REGEX, PASSWORD_MIN_LENGTH, PENDING_STATE, REGISTER_PAGE, VALID_EMAIL_REGEX,
 } from '../data/constants';
 import {
   getAllPossibleQueryParams, getTpaHint, getTpaProvider, setCookie, setSurveyCookie,
@@ -298,7 +298,7 @@ const RegistrationPage = (props) => {
         }
         break;
       case 'password':
-        if (!value || !LETTER_REGEX.test(value) || !NUMBER_REGEX.test(value) || value.length < 8) {
+        if (!value || value.length < PASSWORD_MIN_LENGTH) {
           fieldError = formatMessage(messages['password.validation.message']);
         } else if (shouldValidateFromBackend) {
           validateFromBackend(payload);

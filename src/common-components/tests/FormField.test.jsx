@@ -33,7 +33,7 @@ describe('PasswordField', () => {
     props = {
       floatingLabel: 'Password',
       name: 'password',
-      value: 'password123',
+      value: 'correcthorsebatterystaple', // 25 chars, passes the 18-char minimum
       handleFocus: jest.fn(),
     };
   });
@@ -74,8 +74,8 @@ describe('PasswordField', () => {
     });
     passwordField.update();
 
-    expect(passwordField.find('#letter-check span').prop('className')).toEqual('pgn__icon mr-1 text-light-700');
-    expect(passwordField.find('#number-check span').prop('className')).toEqual('pgn__icon mr-1 text-light-700');
+    expect(passwordField.find('#letter-check').exists()).toBeFalsy();
+    expect(passwordField.find('#number-check').exists()).toBeFalsy();
     expect(passwordField.find('#characters-check span').prop('className')).toEqual('pgn__icon mr-1 text-light-700');
   });
 
@@ -88,8 +88,6 @@ describe('PasswordField', () => {
     });
     passwordField.update();
 
-    expect(passwordField.find('#letter-check span').prop('className')).toEqual('pgn__icon text-success mr-1');
-    expect(passwordField.find('#number-check span').prop('className')).toEqual('pgn__icon text-success mr-1');
     expect(passwordField.find('#characters-check span').prop('className')).toEqual('pgn__icon text-success mr-1');
   });
 });

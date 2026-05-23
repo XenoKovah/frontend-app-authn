@@ -61,7 +61,7 @@ describe('ResetPasswordPage', () => {
   // ******** form submission tests ********
 
   it('with valid inputs resetPassword action is dispatched', async () => {
-    const password = 'test-password-1';
+    const password = 'test-password-123456';
 
     store = mockStore({
       resetPassword: {

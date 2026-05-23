@@ -56,24 +56,14 @@ const messages = defineMessages({
     defaultMessage: 'Hide password',
     description: 'aria label for hide password icon on password field',
   },
-  'one.letter': {
-    id: 'one.letter',
-    defaultMessage: '1 letter',
-    description: 'password requirement to have 1 letter',
-  },
-  'one.number': {
-    id: 'one.number',
-    defaultMessage: '1 number',
-    description: 'password requirement to have 1 number',
-  },
-  'eight.characters': {
-    id: 'eight.characters',
-    defaultMessage: '8 characters',
-    description: 'password requirement to have a minimum of 8 characters',
+  'eighteen.characters': {
+    id: 'eighteen.characters',
+    defaultMessage: '18 characters',
+    description: 'password requirement to have a minimum of 18 characters',
   },
   'password.sr.only.helping.text': {
     id: 'password.sr.only.helping.text',
-    defaultMessage: 'Password must contain at least 8 characters, at least one letter, and at least one number',
+    defaultMessage: 'Password must contain at least 18 characters',
     description: 'Password helping text for the sr-only class',
   },
   // third party auth
