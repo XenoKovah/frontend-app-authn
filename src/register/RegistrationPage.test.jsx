@@ -180,7 +180,7 @@ describe('RegistrationPage', () => {
         name: 'John Doe',
         username: 'john_doe',
         email: 'john.doe@gmail.com',
-        password: 'password1',
+        password: 'passwordpassword1234',
         country: 'Pakistan',
         honor_code: true,
         total_registration_time: 0,
@@ -236,7 +236,7 @@ describe('RegistrationPage', () => {
         name: 'Petro',
         username: 'petro_qa',
         email: 'petro  @example.com',
-        password: 'password1',
+        password: 'passwordpassword1234',
         country: 'Ukraine',
         honor_code: true,
         total_registration_time: 0,
@@ -261,7 +261,7 @@ describe('RegistrationPage', () => {
         name: 'Petro',
         username: 'petro qa',
         email: 'petro@example.com',
-        password: 'password1',
+        password: 'passwordpassword1234',
         country: 'Ukraine',
         honor_code: true,
         total_registration_time: 0,
@@ -287,7 +287,7 @@ describe('RegistrationPage', () => {
         name: 'John Doe',
         username: 'john_doe',
         email: 'john.doe@gmail.com',
-        password: 'password1',
+        password: 'passwordpassword1234',
         country: 'Pakistan',
         honor_code: true,
         total_registration_time: 0,
@@ -314,7 +314,7 @@ describe('RegistrationPage', () => {
       const payload = {
         name: 'John Doe',
         email: 'john.doe@gmail.com',
-        password: 'password1',
+        password: 'passwordpassword1234',
         country: 'Pakistan',
         honor_code: true,
         total_registration_time: 0,
@@ -676,7 +676,7 @@ describe('RegistrationPage', () => {
               name: 'John Doe',
               username: 'john_doe',
               email: 'john.doe@yopmail.com',
-              password: 'password1',
+              password: 'passwordpassword1234',
             },
             emailSuggestion: {
               suggestion: 'john.doe@hotmail.com', type: 'warning',
@@ -696,7 +696,7 @@ describe('RegistrationPage', () => {
       expect(fullNameInput.value).toEqual('John Doe');
       expect(usernameInput.value).toEqual('john_doe');
       expect(emailInput.value).toEqual('john.doe@yopmail.com');
-      expect(passwordInput.value).toEqual('password1');
+      expect(passwordInput.value).toEqual('passwordpassword1234');
       expect(emailSuggestion.textContent).toEqual('john.doe@hotmail.com');
     });
 

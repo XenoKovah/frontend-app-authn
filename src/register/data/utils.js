@@ -1,6 +1,6 @@
 import { snakeCaseObject } from '@edx/frontend-platform';
 
-import { LETTER_REGEX, NUMBER_REGEX } from '../../data/constants';
+import { PASSWORD_MIN_LENGTH } from '../../data/constants';
 import messages from '../messages';
 import validateEmail from '../RegistrationFields/EmailField/validator';
 import validateName from '../RegistrationFields/NameField/validator';
@@ -14,7 +14,7 @@ import validateUsername from '../RegistrationFields/UsernameField/validator';
  */
 export const validatePasswordField = (value, formatMessage) => {
   let fieldError = '';
-  if (!value || !LETTER_REGEX.test(value) || !NUMBER_REGEX.test(value) || value.length < 8) {
+  if (!value || value.length < PASSWORD_MIN_LENGTH) {
     fieldError = formatMessage(messages['password.validation.message']);
   }
   return fieldError;

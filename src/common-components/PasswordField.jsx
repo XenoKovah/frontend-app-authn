@@ -11,7 +11,7 @@ import {
 import PropTypes from 'prop-types';
 
 import messages from './messages';
-import { LETTER_REGEX, NUMBER_REGEX } from '../data/constants';
+import { PASSWORD_MIN_LENGTH } from '../data/constants';
 import { clearRegistrationBackendError, fetchRealtimeValidations } from '../register/data/actions';
 import { validatePasswordField } from '../register/data/utils';
 
@@ -101,17 +101,9 @@ const PasswordField = (props) => {
   const placement = window.innerWidth < 768 ? 'top' : 'left';
   const tooltip = (
     <Tooltip id={`password-requirement-${placement}`}>
-      <span id="letter-check" className="d-flex align-items-center">
-        {LETTER_REGEX.test(props.value) ? <Icon className="text-success mr-1" src={Check} /> : <Icon className="mr-1 text-light-700" src={Remove} />}
-        {formatMessage(messages['one.letter'])}
-      </span>
-      <span id="number-check" className="d-flex align-items-center">
-        {NUMBER_REGEX.test(props.value) ? <Icon className="text-success mr-1" src={Check} /> : <Icon className="mr-1 text-light-700" src={Remove} />}
-        {formatMessage(messages['one.number'])}
-      </span>
       <span id="characters-check" className="d-flex align-items-center">
-        {props.value.length >= 8 ? <Icon className="text-success mr-1" src={Check} /> : <Icon className="mr-1 text-light-700" src={Remove} />}
-        {formatMessage(messages['eight.characters'])}
+        {props.value.length >= PASSWORD_MIN_LENGTH ? <Icon className="text-success mr-1" src={Check} /> : <Icon className="mr-1 text-light-700" src={Remove} />}
+        {formatMessage(messages['eighteen.characters'])}
       </span>
     </Tooltip>
   );
